@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script>
+    module.exports = {
+      theme: {
+        extend: {
+          fontFamily: {
+            overpass: ['Overpass', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <div class="flex items-center justify-center min-h-screen bg-gray-800">
+    <div class="flex flex-col items-center text-center bg-gray-900 rounded-xl p-6 w-[280px]">
+
+      <img src="images/icon-star.svg" alt="star" class="self-start mb-4">
+
+      <h1 class="font-overpass font-bold text-xl text-white mb-2 self-start">
+        How did we do?
+      </h1>
+
+      <p class="font-overpass font-normal text-[15px] text-gray-400 mb-4 text-left">
+        Please let us know how we did with your support<br> request. All feedback is appreciated to help us<br>improve!
+      </p>
+
+      <div class="flex gap-2 mb-4 justify-center">
+        <label
+          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          <input type="radio" name="rating" value="1" class="hidden">
+          1
+        </label>
+        <label
+          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          <input type="radio" name="rating" value="2" class="hidden">
+          2
+        </label>
+        <label
+          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          <input type="radio" name="rating" value="3" class="hidden">
+          3
+        </label>
+        <label
+          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          <input type="radio" name="rating" value="4" class="hidden">
+          4
+        </label>
+        <label
+          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          <input type="radio" name="rating" value="5" class="hidden">
+          5
+        </label>
+      </div>
+
+      <button class="bg-orange-500 text-black px-6 py-2 rounded-full w-full hover:bg-orange-400 transition">
+        Submit
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- Rating state end -->
+
+  <div class="flex items-center justify-center min-h-screen bg-gray-800">
+    <div class="flex flex-col items-center text-center bg-gray-900 rounded-xl p-6 w-[280px]">
+
+      <!-- Thank you illustration -->
+      <img src="images/illustration-thank-you.svg" alt="thank you" class="mb-4 w-24 h-24">
+
+      <!-- Selected rating -->
+      <p class="bg-gray-700 text-orange-500 px-4 py-1 rounded-full mb-4 text-[15px]">
+        You selected <span id="selected-rating">3</span> out of 5
+      </p>
+
+      <!-- Heading -->
+      <h1 class="font-overpass font-bold text-xl text-white mb-2">
+        Thank you!
+      </h1>
+
+      <!-- Description -->
+      <p class="font-overpass font-normal text-[15px] text-gray-400">
+        We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+        touch!
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Attribution -->
+  <div class="text-center text-gray-500 text-xs mt-4 font-overpass">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="underline">
+      Frontend Mentor
+    </a>.
+    Coded by
+    <a href="#" class="underline">Max Mendes</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
