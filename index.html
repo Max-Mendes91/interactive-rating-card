@@ -6,112 +6,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Interactive rating component</title>
-  <script>
-    module.exports = {
-      theme: {
-        extend: {
-          fontFamily: {
-            overpass: ['Overpass', 'sans-serif'],
-          },
-        },
-      },
-      plugins: [],
+  <title>Interactive Rating Component</title>
+  <style>
+    body {
+      font-family: 'Overpass', sans-serif;
     }
-  </script>
+
+    .rating-btn.selected {
+      background-color: #fb7413;
+      color: white;
+    }
+
+    .rating-btn:hover {
+      background-color: #7c8798;
+      color: white;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-[#131518]">
 
-  <!-- Rating state start -->
-  <div class="flex items-center justify-center min-h-screen bg-gray-800">
-    <div class="flex flex-col items-center text-center bg-gray-900 rounded-xl p-6 w-[280px]">
+  <!-- Rating state -->
+  <div id="rating-card" class="flex items-center justify-center min-h-screen px-4 py-8">
+    <div
+      class="bg-gradient-to-b from-[#232a34] to-[#181e27] rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-8 w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px]">
 
-      <img src="images/icon-star.svg" alt="star" class="self-start mb-4">
+      <!-- Star icon with background -->
+      <div
+        class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center mb-4 sm:mb-5 md:mb-6">
+        <svg width="15" height="15" class="sm:w-4 sm:h-4 md:w-[17px] md:h-4" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
+            fill="#FC7614" />
+        </svg>
+      </div>
 
-      <h1 class="font-overpass font-bold text-xl text-white mb-2 self-start">
+      <!-- Heading -->
+      <h1 class="text-white text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4">
         How did we do?
       </h1>
 
-      <p class="font-overpass font-normal text-[15px] text-gray-400 mb-4 text-left">
-        Please let us know how we did with your support<br> request. All feedback is appreciated to help us<br>improve!
+      <!-- Description -->
+      <p class="text-[#969fad] text-sm sm:text-[15px] md:text-base leading-5 sm:leading-6 mb-5 sm:mb-6">
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+        offering!
       </p>
 
-      <div class="flex gap-2 mb-4 justify-center">
+      <!-- Rating buttons -->
+      <div class="flex justify-between gap-2 sm:gap-3 mb-6 sm:mb-7 md:mb-8">
         <label
-          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          class="rating-btn text-[#969fad] w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center cursor-pointer transition text-sm sm:text-base">
           <input type="radio" name="rating" value="1" class="hidden">
-          1
+          <span>1</span>
         </label>
         <label
-          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          class="rating-btn text-[#969fad] w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center cursor-pointer transition text-sm sm:text-base">
           <input type="radio" name="rating" value="2" class="hidden">
-          2
+          <span>2</span>
         </label>
         <label
-          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          class="rating-btn text-[#969fad] w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center cursor-pointer transition text-sm sm:text-base">
           <input type="radio" name="rating" value="3" class="hidden">
-          3
+          <span>3</span>
         </label>
         <label
-          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          class="rating-btn text-[#969fad] w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center cursor-pointer transition text-sm sm:text-base">
           <input type="radio" name="rating" value="4" class="hidden">
-          4
+          <span>4</span>
         </label>
         <label
-          class="text-gray-500 w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer">
+          class="rating-btn text-[#969fad] w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#262e38] rounded-full flex items-center justify-center cursor-pointer transition text-sm sm:text-base">
           <input type="radio" name="rating" value="5" class="hidden">
-          5
+          <span>5</span>
         </label>
       </div>
 
-      <button class="bg-orange-500 text-black px-6 py-2 rounded-full w-full hover:bg-orange-400 transition">
+      <!-- Submit button -->
+      <button id="submit-btn"
+        class="bg-[#fc7614] text-white font-bold text-sm sm:text-[15px] tracking-widest uppercase px-6 py-2.5 sm:py-3 rounded-full w-full hover:bg-white hover:text-[#fc7614] transition">
         Submit
       </button>
 
     </div>
   </div>
 
-
-  <!-- Rating state end -->
-
-  <div class="flex items-center justify-center min-h-screen bg-gray-800">
-    <div class="flex flex-col items-center text-center bg-gray-900 rounded-xl p-6 w-[280px]">
+  <!-- Thank you state -->
+  <div id="thankyou-card"
+    class="hidden flex items-center justify-center min-h-screen px-4 py-8 bg-[#131518] fixed inset-0">
+    <div
+      class="bg-gradient-to-b from-[#232a34] to-[#181e27] rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-8 w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] flex flex-col items-center text-center">
 
       <!-- Thank you illustration -->
-      <img src="images/illustration-thank-you.svg" alt="thank you" class="mb-4 w-24 h-24">
+      <img src="images/illustration-thank-you.svg" alt="Thank you illustration"
+        class="w-[130px] h-[90px] sm:w-[150px] sm:h-[100px] md:w-[162px] md:h-[108px] mb-6 sm:mb-7 md:mb-8">
 
-      <!-- Selected rating -->
-      <p class="bg-gray-700 text-orange-500 px-4 py-1 rounded-full mb-4 text-[15px]">
-        You selected <span id="selected-rating">3</span> out of 5
+      <!-- Selected rating badge -->
+      <p
+        class="bg-[#262e38] text-[#fc7614] px-4 sm:px-5 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-7 md:mb-8 text-sm sm:text-[15px]">
+        You selected <span id="selected-rating">0</span> out of 5
       </p>
 
       <!-- Heading -->
-      <h1 class="font-overpass font-bold text-xl text-white mb-2">
+      <h1 class="text-white text-xl sm:text-2xl md:text-[28px] font-bold mb-3 sm:mb-4">
         Thank you!
       </h1>
 
       <!-- Description -->
-      <p class="font-overpass font-normal text-[15px] text-gray-400">
-        We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+      <p class="text-[#969fad] text-sm sm:text-[15px] md:text-base leading-5 sm:leading-6">
+        We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
         touch!
       </p>
 
     </div>
-  </div>
-
-  <!-- Attribution -->
-  <div class="text-center text-gray-500 text-xs mt-4 font-overpass">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="underline">
-      Frontend Mentor
-    </a>.
-    Coded by
-    <a href="#" class="underline">Max Mendes</a>.
   </div>
   <script src="script.js"></script>
 </body>
