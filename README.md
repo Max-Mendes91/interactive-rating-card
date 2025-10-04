@@ -2,7 +2,13 @@
 
 A responsive rating component built with HTML, Tailwind CSS, and vanilla JavaScript. Users can select a rating from 1-5 and submit their feedback to see a thank you message.
 
-![Rating Component Preview](design/desktop-preview.jpg)
+![Rating Component Preview](design/desktop-design.jpg)
+
+
+## 🚀 Live Demo
+
+[View Live Demo](https://max-mendes91.github.io/interactive-rating-card/)
+
 
 ## Features
 
